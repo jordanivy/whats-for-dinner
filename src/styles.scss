@@ -1,5 +1,41 @@
 /* You can add global styles to this file, and also import other style files */
 
 html {
-    background-color: #F4ECEC;
+    background-color: #f4f0ec;
+    height: 100%;
+    background-image: url('assets/images/fries.png');
+    background-repeat: no-repeat;
+    background-position: right 4vw bottom 1vh;
+    background-size: 20%;
+}
+
+h1 {
+    font-family: 'Concert One', cursive;
+    font-size: 8vh;
+    text-align: center;
+ }
+
+ h2 {
+    font-family: 'Text Me One', sans-serif;
+    font-size: 5vh;
+    text-align: center;
+ }
+
+ form {
+     font-size: 3vh;
+}
+
+body {
+    font-family: 'Karma', serif;
+}
+
+#pick-up-btn, #stay-home-btn, #dine-in-btn {
+    font-family: 'Text Me One', sans-serif;
+    width: 100%;
+    font-size: 5vh;
+}
+
+#go-btn {
+    width: 15%;
+    font-size: 2vh;
 }

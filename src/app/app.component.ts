@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LyTheme2, shadowBuilder, ThemeVariables } from '@alyle/ui';
+import { Router } from '@angular/router';
 
 const styles = (theme: ThemeVariables) => ({
   item: {
@@ -17,9 +18,13 @@ const styles = (theme: ThemeVariables) => ({
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   readonly classes = this.theme.addStyleSheet(styles);
-  constructor(
-    private theme: LyTheme2
-  ) { }
+  path: string = '';
+  constructor(private theme: LyTheme2, private _router: Router) { }
+
+  ngOnInit() {
+    this.path = this._router.url;
+  }
+
 }
