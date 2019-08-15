@@ -35,6 +35,7 @@ import { LyFieldModule } from '@alyle/ui/field';
 import { CommonModule } from "@angular/common";
 import { LocationResultsComponent } from './location-results/location-results.component';
 import { LyCardModule } from '@alyle/ui/card';
+import { RestaurantResultComponent } from './restaurant-result/restaurant-result.component';
 
 export class CustomTheme implements PartialThemeVariables { 
   name = 'minima-light';
@@ -49,7 +50,7 @@ export class CustomTheme implements PartialThemeVariables {
 }
 
 @NgModule({
-  declarations: [AppComponent, HomeComponent, PickUpButtonComponent, DineInButtonComponent, StayHomeButtonComponent, PickUpFormComponent, DineInFormComponent, StayHomeFormComponent, LocationResultsComponent],
+  declarations: [AppComponent, HomeComponent, PickUpButtonComponent, DineInButtonComponent, StayHomeButtonComponent, PickUpFormComponent, DineInFormComponent, StayHomeFormComponent, LocationResultsComponent, RestaurantResultComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

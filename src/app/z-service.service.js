@@ -7,24 +7,20 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 exports.__esModule = true;
 var core_1 = require("@angular/core");
-var http_1 = require("@angular/common/http");
+var operators_1 = require("rxjs/operators");
 var ZService = /** @class */ (function () {
     function ZService(_http) {
         this._http = _http;
     }
-    ZService.prototype.ngOnInit = function () {
-        this.headerDict = {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json',
-            'Access-Control-Allow-Headers': 'Content-Type',
-            'user-key': 'ff19b613d60ccb02815c02146ea4f7c6'
-        };
-        this.requestOptions = {
-            headers: new http_1.HttpHeaders(this.headerDict)
-        };
-    };
+    ZService.prototype.ngOnInit = function () { };
+    ;
     ZService.prototype.getZomatoLocations = function (userInput) {
-        return this._http.get(("https://developers.zomato.com/api/v2.1/locations?query=" + userInput), { headers: this.requestOptions });
+        return this._http.get(("https://developers.zomato.com/api/v2.1/locations?query=" + userInput), { headers: { 'user-key': 'ff19b613d60ccb02815c02146ea4f7c6' } })
+            .pipe(operators_1.map(function (response) { return response; }));
+    };
+    ZService.prototype.getResultsByEntityId = function (entity_id) {
+        return this._http.get(("https://developers.zomato.com/api/v2.1/search?entity_id=" + entity_id), { headers: { 'user-key': 'ff19b613d60ccb02815c02146ea4f7c6' } })
+            .pipe(operators_1.map(function (response) { return response; }));
     };
     ZService = __decorate([
         core_1.Injectable({

@@ -1,7 +1,8 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\app"
   ],
-  "SelectedNode": "\\main.ts",
+  "SelectedNode": "\\app\\app.module.ts",
   "PreviewInSolutionExplorer": false
 }

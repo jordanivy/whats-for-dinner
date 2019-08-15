@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { LyTheme2, ThemeVariables } from '@alyle/ui';
 import { ZService } from '../z-service.service';
@@ -18,7 +18,7 @@ const STYLES = (_theme: ThemeVariables) => ({
 })
 export class PickUpFormComponent implements OnInit {
   location = new FormControl('');
-  locationResults: [];
+  locationResults: LocationSuggestions[];
 
   constructor(private _zomatoService: ZService, private _router: Router) { }
 
@@ -28,9 +28,12 @@ export class PickUpFormComponent implements OnInit {
     this._zomatoService.getZomatoLocations(this.location.value).subscribe((res) => this.handleReturn(<LocationSuggestions>res));
   }
 
-  handleReturn(data: LocationSuggestions) {
-    console.log(data.location_suggestions);
-    this._router.navigateByUrl("/location-results");
+  handleReturn(data: LocationSuggestions) 
+  {
+    if (!this.location.invalid){
+      this.locationResults = [];
+      this.locationResults.push(data);
+    }
   }
 
 }

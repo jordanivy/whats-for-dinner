@@ -19,10 +19,15 @@ var styles = function (theme) { return ({
     }
 }); };
 var AppComponent = /** @class */ (function () {
-    function AppComponent(theme) {
+    function AppComponent(theme, _router) {
         this.theme = theme;
+        this._router = _router;
         this.classes = this.theme.addStyleSheet(styles);
+        this.path = '';
     }
+    AppComponent.prototype.ngOnInit = function () {
+        this.path = this._router.url;
+    };
     AppComponent = __decorate([
         core_1.Component({
             selector: 'app-root',

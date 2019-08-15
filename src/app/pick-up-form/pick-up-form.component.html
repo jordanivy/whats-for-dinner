@@ -2,16 +2,19 @@
     <ly-grid item col="4 12@XSmall"></ly-grid>
     <ly-grid item col="4 12@XSmall">
         <h2>Picking up...</h2>
-        <form (ngSubmit)="onSubmit()">
+        <form (ngSubmit)="onSubmit()" [hidden]="locationResults">
           <label>Where are you located?</label><br>
           <ly-field appearance="filled" fullWidth>
             <input 
               lyNativeControl 
               type="text" 
               [formControl]="location"
-              placeholder="Location">
+              placeholder="Location"
+              minlength="3"
+              required>
           </ly-field>
           <button id="go-btn" ly-button outlined bg="primary" type="submit">Go</button>
         </form>
+        <app-location-results [locations]="locationResults" *ngIf="locationResults"></app-location-results>
     </ly-grid>
 </ly-grid>

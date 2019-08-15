@@ -7,17 +7,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 exports.__esModule = true;
 var core_1 = require("@angular/core");
-var HomeComponent = /** @class */ (function () {
-    function HomeComponent() {
+var DineInFormComponent = /** @class */ (function () {
+    function DineInFormComponent() {
     }
-    HomeComponent.prototype.ngOnInit = function () { };
-    HomeComponent = __decorate([
+    DineInFormComponent.prototype.ngOnInit = function () {
+    };
+    DineInFormComponent = __decorate([
         core_1.Component({
-            selector: 'app-home',
-            templateUrl: './home.component.html',
-            styleUrls: ['./home.component.scss']
+            selector: 'app-dine-in-form',
+            templateUrl: './dine-in-form.component.html',
+            styleUrls: ['./dine-in-form.component.scss']
         })
-    ], HomeComponent);
-    return HomeComponent;
+    ], DineInFormComponent);
+    return DineInFormComponent;
 }());
-exports.HomeComponent = HomeComponent;
+exports.DineInFormComponent = DineInFormComponent;

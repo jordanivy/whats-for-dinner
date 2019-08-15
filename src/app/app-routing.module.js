@@ -9,8 +9,12 @@ exports.__esModule = true;
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var home_component_1 = require("./home/home.component");
+var pick_up_form_component_1 = require("./pick-up-form/pick-up-form.component");
+var location_results_component_1 = require("./location-results/location-results.component");
 var routes = [
-    { path: '', component: home_component_1.HomeComponent }
+    { path: '', component: home_component_1.HomeComponent },
+    { path: 'picking-up', component: pick_up_form_component_1.PickUpFormComponent },
+    { path: 'location-results', component: location_results_component_1.LocationResultsComponent }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {

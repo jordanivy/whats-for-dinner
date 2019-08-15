@@ -1,15 +1,9 @@
-<ly-grid container spacing="16 8@XSmall">
-  <ly-grid item col="4 12@XSmall"></ly-grid>
-  <ly-grid item col="4 12@XSmall">
-    <ly-card style="max-width: 320px">
-      <ly-card-content>
-        <h2>Mountains blue</h2>
-      </ly-card-content>
-      <ly-card-actions disableActionSpacing>
-        <button ly-button appearance="icon">
-          <ly-icon>share</ly-icon>
-        </button>
-      </ly-card-actions>
-    </ly-card>
-  </ly-grid>
-</ly-grid>
+<ly-card style="max-width: 320px" *ngFor="let location of topThreeLocationResults">
+  <ly-card-content>
+    <h2>{{ location.title }}</h2>
+  </ly-card-content>
+  <ly-card-actions disableActionSpacing>
+    <button id="select-location-btn" ly-button raised bg="primary" (click)="checkOptions(location.entity_id)">Select</button>
+  </ly-card-actions>
+</ly-card>
+<app-restaurant-result *ngIf="restaurants" [restaurants]="restaurants"></app-restaurant-result>

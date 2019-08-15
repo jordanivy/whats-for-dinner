@@ -7,17 +7,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 exports.__esModule = true;
 var core_1 = require("@angular/core");
-var HomeComponent = /** @class */ (function () {
-    function HomeComponent() {
+var StayHomeFormComponent = /** @class */ (function () {
+    function StayHomeFormComponent() {
     }
-    HomeComponent.prototype.ngOnInit = function () { };
-    HomeComponent = __decorate([
+    StayHomeFormComponent.prototype.ngOnInit = function () {
+    };
+    StayHomeFormComponent = __decorate([
         core_1.Component({
-            selector: 'app-home',
-            templateUrl: './home.component.html',
-            styleUrls: ['./home.component.scss']
+            selector: 'app-stay-home-form',
+            templateUrl: './stay-home-form.component.html',
+            styleUrls: ['./stay-home-form.component.scss']
         })
-    ], HomeComponent);
-    return HomeComponent;
+    ], StayHomeFormComponent);
+    return StayHomeFormComponent;
 }());
-exports.HomeComponent = HomeComponent;
+exports.StayHomeFormComponent = StayHomeFormComponent;
